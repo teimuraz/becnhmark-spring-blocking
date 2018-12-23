@@ -28,9 +28,7 @@ public class RequestService {
         String result = "";
         try {
             result = restTemplate.getForObject(url, String.class);
-            logger.info("Request done for url " + url);
         } catch (Exception e) {
-            logger.info("Request failed for url" + url);
         }
         return CompletableFuture.completedFuture(result);
     }
