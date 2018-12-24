@@ -19,7 +19,7 @@ public class Controller {
 
     Random rand = new Random();
 
-    @GetMapping("/-requests")
+    @GetMapping
     public String home() {
         return "Hi";
     }
