@@ -26,10 +26,7 @@ public class RequestService {
     public CompletableFuture<String> makeRequest(String url) throws InterruptedException {
 //        logger.info("Making request to url " + url);
         String result = "";
-        try {
-            result = restTemplate.getForObject(url, String.class);
-        } catch (Exception e) {
-        }
+        result = restTemplate.getForObject("http://18.188.1.66:8080", String.class);
         return CompletableFuture.completedFuture(result);
     }
 }
