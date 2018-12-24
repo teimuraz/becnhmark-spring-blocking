@@ -19,6 +19,11 @@ public class Controller {
 
     Random rand = new Random();
 
+    @GetMapping("/-requests")
+    public String home() {
+        return "Hi";
+    }
+
     @GetMapping("/parallel-requests")
     public String parallelRequests() throws InterruptedException {
         CompletableFuture<String> res1 = requestService.makeRequest("https://emoney.ge?p=" + rand.nextInt(99999) + 1);
