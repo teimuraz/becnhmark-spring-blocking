@@ -27,7 +27,7 @@ public class RequestService {
 //        logger.info("Making request to url " + url);
         String result = "";
         try {
-            result = restTemplate.getForObject("http://18.188.1.66:8080", String.class);
+            result = restTemplate.getForObject(url, String.class);
         } catch (Exception e) {
         }
         return CompletableFuture.completedFuture(result);
