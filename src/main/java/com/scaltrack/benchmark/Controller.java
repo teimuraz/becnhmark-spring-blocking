@@ -23,7 +23,6 @@ public class Controller {
     public String parallelRequests() throws InterruptedException {
         CompletableFuture<String> res1 = requestService.makeRequest("https://emoney.ge?p=" + rand.nextInt(99999) + 1);
         CompletableFuture<String> res2 = requestService.makeRequest("https://github.com?p=" + rand.nextInt(99999) + 1);
-        CompletableFuture<String> res3 = requestService.makeRequest("https://stackoverflow.com?p=" + rand.nextInt(99999) + 1);
         CompletableFuture<String> res4 = requestService.makeRequest("https://google.com?p=" + rand.nextInt(99999) + 1);
         CompletableFuture<String> res5 = requestService.makeRequest("https://twitter.com?p=" + rand.nextInt(99999) + 1);
         CompletableFuture<String> res6 = requestService.makeRequest("https://linkedin.com?p=" + rand.nextInt(99999) + 1);
@@ -32,7 +31,7 @@ public class Controller {
         CompletableFuture<String> res9 = requestService.makeRequest("https://microsoft.com?p=" + rand.nextInt(99999) + 1);
         CompletableFuture<String> res10 = requestService.makeRequest("https://ebay.com?p=" + rand.nextInt(99999) + 1);
 
-        CompletableFuture.allOf(res1, res2, res3, res4, res5, res6, res7,  res9, res10).join();
+        CompletableFuture.allOf(res1, res2, res4, res5, res6, res7,  res9, res10).join();
         return "Done";
     }
 }
