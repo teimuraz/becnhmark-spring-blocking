@@ -20,14 +20,7 @@ public class BenchmarkApplication {
 	@Bean
 	public Executor taskExecutor() {
 		return Executors.newFixedThreadPool(400);
-//		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-//		executor.setCorePoolSize(20);
-//		executor.setMaxPoolSize(25);
-//		executor.setQueueCapacity(500);
-//		executor.setThreadNamePrefix("ParallelRequests-");
-//		executor.initialize();
-//		return executor;
-	}
 
+	}
 }
 
