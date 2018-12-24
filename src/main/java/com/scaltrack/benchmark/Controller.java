@@ -26,15 +26,15 @@ public class Controller {
 
     @GetMapping("/parallel-requests")
     public String parallelRequests() throws InterruptedException {
-        CompletableFuture<String> res1 = requestService.makeRequest("http://18.188.1.66:8080" + rand.nextInt(99999) + 1);
-        CompletableFuture<String> res2 = requestService.makeRequest("http://18.188.1.66:8080" + rand.nextInt(99999) + 1);
-        CompletableFuture<String> res4 = requestService.makeRequest("http://18.188.1.66:8080" + rand.nextInt(99999) + 1);
-        CompletableFuture<String> res5 = requestService.makeRequest("http://18.188.1.66:8080" + rand.nextInt(99999) + 1);
-        CompletableFuture<String> res6 = requestService.makeRequest("http://18.188.1.66:8080" + rand.nextInt(99999) + 1);
-        CompletableFuture<String> res7 = requestService.makeRequest("http://18.188.1.66:8080" + rand.nextInt(99999) + 1);
+        CompletableFuture<String> res1 = requestService.makeRequest("http://52.42.198.2:8080" + rand.nextInt(99999) + 1);
+        CompletableFuture<String> res2 = requestService.makeRequest("http://52.42.198.2:8080" + rand.nextInt(99999) + 1);
+        CompletableFuture<String> res4 = requestService.makeRequest("http://52.42.198.2:8080" + rand.nextInt(99999) + 1);
+        CompletableFuture<String> res5 = requestService.makeRequest("http://52.42.198.2:8080" + rand.nextInt(99999) + 1);
+        CompletableFuture<String> res6 = requestService.makeRequest("http://52.42.198.2:8080" + rand.nextInt(99999) + 1);
+        CompletableFuture<String> res7 = requestService.makeRequest("http://52.42.198.2:8080" + rand.nextInt(99999) + 1);
 //        CompletableFuture<String> res8 = requestService.makeRequest("https://amazon.com?p=" + rand.nextInt(99999) + 1);
-        CompletableFuture<String> res9 = requestService.makeRequest("http://18.188.1.66:8080" + rand.nextInt(99999) + 1);
-        CompletableFuture<String> res10 = requestService.makeRequest("http://18.188.1.66:8080" + rand.nextInt(99999) + 1);
+        CompletableFuture<String> res9 = requestService.makeRequest("http://52.42.198.2:8080" + rand.nextInt(99999) + 1);
+        CompletableFuture<String> res10 = requestService.makeRequest("http://52.42.198.2:8080" + rand.nextInt(99999) + 1);
 
         CompletableFuture.allOf(res1, res2, res4, res5, res6, res7,  res9, res10).join();
         return "Done";
